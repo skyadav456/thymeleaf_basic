@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Looping in thymleaf</title>
+</head>
+<body>
+        <h1> Example of th:each attribute:</h1>
+        <table border="1px">
+            <thead>
+            <tr>
+                <th>S.R</th>
+                <th>Index</th>
+                <th>Even</th>
+                <th>Odd</th>
+                <th>First</th>
+                <th>Last</th>
+
+                <th>Name</th>
+                <th>Emali</th>
+                <th>Role</th>
+                <th>Gender</th>
+
+            </tr>
+            </thead>
+            <tbody>
+<!--                <tr th:each="a :${admin}">-->
+<!--                    <td th:text="${a.name}"></td>-->
+<!--                    <td th:text="${a.email}"></td>-->
+<!--                    <td th:text="${a.role}"></td>-->
+<!--                    <td th:text="${a.gender}"></td>-->
+<!--                </tr>-->
+<!--            for the each status variable property-->
+
+                <tr th:each="a,userStatus :${admin}">
+                    <td th:text="${userStatus.count}"></td>    <!--for S.R number-->
+                    <td th:text="${userStatus.index}"></td>
+                    <td th:text="${userStatus.even}"></td>
+                    <td th:text="${userStatus.odd}"></td>
+                    <td th:text="${userStatus.first}"></td>
+                    <td th:text="${userStatus.last}"></td>
+
+                    <td th:text="${a.name}"></td>
+                    <td th:text="${a.email}"></td>
+                    <td th:text="${a.role}"></td>
+                    <td th:text="${a.gender}"></td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>

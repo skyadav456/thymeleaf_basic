@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>selection expression</title>
+</head>
+<body>
+        <h1>Selection Expression </h1>
+        <h3>User detail:</h3>
+        <div th:object="${selection}">
+            <p>Name: <strong th:text="*{name}"></strong></p>
+            <p>Email: <strong th:text="*{email}"></strong></p>
+            <p>Role: <strong th:text="*{role}"></strong></p>
+            <p>gender: <strong th:text="*{gender}"></strong></p>
+        </div>
+</body>
+</html>
